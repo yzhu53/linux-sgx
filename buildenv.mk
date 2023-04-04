@@ -101,7 +101,7 @@ else
     COMMON_FLAGS += -fstack-protector-strong
 endif
 
-ifdef DEBUG
+ifeq ($(DEBUG), 1)
     COMMON_FLAGS += -O0 -ggdb -DDEBUG -UNDEBUG
     COMMON_FLAGS += -DSE_DEBUG_LEVEL=SE_TRACE_DEBUG
 else
